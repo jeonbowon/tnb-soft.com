@@ -1,11 +1,12 @@
 @import "tailwindcss";
 
+/* Light theme baseline (B2B) */
 :root {
-  --background: #070a0f;
-  --foreground: #e7eaf0;
-  --muted: #a1a8b3;
-  --card: rgba(10, 12, 18, 0.65);
-  --border: rgba(255, 255, 255, 0.10);
+  --background: #f6f7fb;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --card: rgba(255, 255, 255, 0.86);
+  --border: rgba(15, 23, 42, 0.10);
 }
 
 body {
@@ -15,19 +16,19 @@ body {
     Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
 }
 
-/* 선택 영역이 너무 튀지 않게 */
+/* 선택 영역 */
 ::selection {
-  background: rgba(59, 130, 246, 0.25);
+  background: rgba(59, 130, 246, 0.20);
 }
 
-/* 아주 미세한 스크롤바 톤 */
+/* 스크롤바 (라이트 톤) */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.20);
   border-radius: 999px;
 }
 ::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(15, 23, 42, 0.06);
 }
