@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "TNB SOFT",
@@ -48,9 +49,18 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/70 backdrop-blur">
           <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-9 w-9 rounded-xl bg-white ring-1 ring-zinc-200 shadow-sm">
-                <div className="absolute inset-[6px] rounded-lg bg-gradient-to-br from-sky-500/70 via-indigo-500/55 to-fuchsia-500/45" />
+              {/* Logo */}
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white ring-1 ring-zinc-200 shadow-sm overflow-hidden">
+                <Image
+                  src="/brand/tnb_logo.png"
+                  alt="TNB SOFT"
+                  width={48}
+                  height={48}
+                  priority
+                  className="h-12 w-12 object-contain"
+                />
               </div>
+
               <div className="leading-tight">
                 <div className="text-sm font-semibold tracking-wide">TNB SOFT</div>
                 <div className="text-xs text-zinc-500">Technology and Beyond</div>
