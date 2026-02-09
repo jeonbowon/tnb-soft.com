@@ -195,7 +195,7 @@ export const projects: Project[] = [
   },
 
   {
-    slug: "efem-equipment-software",
+    slug: "efem",
     title: "[C++·MFC] EFEM 장비 소프트웨어 개발",
     subtitle: "Robot · Load Port · Aligner 자동 운전 시퀀스 / 인터락 · 알람 · 복구 로직 구현",
     period: "포트폴리오 기준 (양산 장비 적용)",
@@ -258,7 +258,7 @@ export const projects: Project[] = [
     ],
     
     screenshots: [
-      { src: "/projects/efem/main.png", alt: "시스템 메인 화면" },
+      { src: "/projects/efem/cover.png", alt: "시스템 메인 화면" },
       { src: "/projects/efem/lot_start.png", alt: "Lot Start 화면" },
       { src: "/projects/efem/lot_choice.png", alt: "Recipe 선택 화면" },
       { src: "/projects/efem/io.png", alt: "dio 화면" },

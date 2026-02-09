@@ -70,7 +70,7 @@ export default function ServicesPage() {
         <SectionTitle
           eyebrow="Services"
           title="현장에서 바로 쓰이는 장비 소프트웨어를 만듭니다."
-          desc="기능을 늘리는 것보다, 멈추지 않고 굴러가게 만드는 것이 먼저입니다. TNB SOFT는 장비 제어·자동화 연동·레거시 유지보수를 실무 중심으로 수행합니다."
+          desc="TNB SOFT는 장비 제어·자동화 연동·레거시 유지보수를 실무 중심으로 수행합니다."
         />
 
         <div className="mt-6 flex flex-wrap gap-2">
@@ -105,7 +105,7 @@ export default function ServicesPage() {
             핵심 서비스
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-zinc-600">
-            “할 수 있다”가 아니라, “어떻게 안정화했는가”로 이야기합니다.
+            안정화로 이야기합니다.
           </p>
         </div>
 

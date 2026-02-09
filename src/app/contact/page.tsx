@@ -117,11 +117,11 @@ export default function ContactPage() {
 
         <Card title="문의 템플릿(복사해서 보내세요)">
           <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-3 text-xs leading-5 text-zinc-800 whitespace-pre-wrap">
-{`1) 장비/프로젝트명:
-2) 현재 상태(문제/목표):
-3) 희망 일정(착수/납기):
-4) 현장/원격(가능한 방식):
-5) 참고자료(로그/스크린샷/요구사항):`}
+            {`1) 장비/프로젝트명:
+            2) 현재 상태(문제/목표):
+            3) 희망 일정(착수/납기):
+            4) 현장/원격(가능한 방식):
+            5) 참고자료(로그/스크린샷/요구사항):`}
           </div>
           <div className="mt-3 text-xs text-zinc-600">
             위 내용을 메일 본문에 붙여 넣으면, 회신 속도가 달라집니다.
