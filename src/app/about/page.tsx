@@ -21,14 +21,36 @@ export default function AboutPage() {
         </p>
 
         <div className="mt-8 grid gap-8 lg:grid-cols-2">
-          {/* 지도 */}
-          <div className="overflow-hidden rounded-2xl border border-zinc-200">
-            <iframe
-              title="TNB SOFT 위치"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3879.6729278719836!2d126.62675720916118!3d37.40097433714811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbdadf01d581951d%3A0xeb17d4c1b865d5b6!2z7Iah64-E7JSo7JuM7YGs7J247YWM65287Iqk7ZWc6528!5e0!3m2!1sko!2skr!4v1770276033474!5m2!1sko!2skr"
-              className="h-[360px] w-full"
-              loading="lazy"
-            />
+          {/* 지도 미리보기 + 버튼 */}
+          <div className="flex flex-col gap-4">
+            {/* 지도 이미지 */}
+            <div className="overflow-hidden rounded-2xl border border-zinc-200">
+              <img
+                src="/images/map-preview.png"
+                alt="TNB SOFT 위치 지도"
+                className="h-[360px] w-full object-cover"
+              />
+            </div>
+
+            {/* 지도 버튼 */}
+            <div className="flex gap-3 text-sm">
+              <a
+                href="https://map.naver.com/v5/search/인천광역시%20연수구%20센트럴로%20313"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 rounded-xl border border-zinc-200 px-4 py-3 text-center hover:bg-zinc-50"
+              >
+                네이버지도에서 길찾기
+              </a>
+              <a
+                href="https://map.kakao.com/link/search/인천광역시 연수구 센트럴로 313"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 rounded-xl border border-zinc-200 px-4 py-3 text-center hover:bg-zinc-50"
+              >
+                카카오맵에서 열기
+              </a>
+            </div>
           </div>
 
           {/* 주소 / 교통 */}
@@ -43,7 +65,7 @@ export default function AboutPage() {
             <div className="rounded-2xl bg-zinc-50 p-5">
               <div className="text-sm font-medium text-zinc-900">대중교통</div>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-zinc-700">
-                <li>국제업무지구역 5번 출구 도보 3분</li>                
+                <li>국제업무지구역 5번 출구 도보 3분</li>
               </ul>
             </div>
 
