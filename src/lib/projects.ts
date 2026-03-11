@@ -195,6 +195,87 @@ export const projects: Project[] = [
   },
 
   {
+    slug: "dual-robot-mother-line",
+    title: "[C#·WinForms] 나찌 듀얼 로봇 Mother Line 장비 제어 소프트웨어 개발",
+    subtitle: "Samsung Display 납품 · 듀얼 로봇 고속 Loading/Unload · MCR·Shuttle·LPM·Aligner 통합 제어",
+    period: "2020.07 – 2020.11",
+    role: "소프트웨어 전체 개발 (아키텍처 설계 / 제어 시퀀스 구현 / UI 개발 / 현장 안정화)",
+    tags: [
+      "삼성디스플레이",
+      "듀얼로봇",
+      "Mother Line",
+      "장비제어",
+      "고속제어",
+      "모션제어",
+      "C#",
+      "WinForms",
+    ],
+    stack: [
+      "C# (.NET / WinForms)",
+      "Nachi 로봇 (듀얼 암)",
+      "MELSEC PLC (CC-Link)",
+      "DeviceNet (I/O)",
+      "Motion Controller (MELSEC)",
+      "BCR (바코드 리더)",
+      "Smart Camera / Vision",
+      "TCP/IP",
+      "로그/이력 관리",
+    ],
+
+    overview:
+      "Samsung Display에 납품되는 디스플레이 모듈 이송 자동화 장비(Mother Line)의 제어 소프트웨어를 개발했습니다. "
+      + "나찌(Nachi) 듀얼 로봇 2기가 고속으로 모듈을 Loading/Unloading하며, "
+      + "MCR(6기), Shuttle, LPM(Load Port Module), Prealign, Aligner, Reverser 등 "
+      + "다수의 구동 장치를 통합 제어하는 복잡한 구조입니다. "
+      + "Tray 단위 레시피 관리, BCR 기반 Carrier 추적, 실시간 시퀀스 로그와 "
+      + "DeviceNet I/O·모션 축 유지보수 화면까지 전체 소프트웨어를 단독으로 설계하고 구현했습니다.",
+
+    problem: [
+      "듀얼 로봇 2기가 동시에 고속 동작하는 구조에서 충돌 및 시퀀스 경합 방지가 핵심 과제",
+      "MCR 6기, Shuttle, LPM, Aligner 등 다수 장치가 동시에 연동되어 한 장치의 지연이 전체 라인 정지로 이어짐",
+      "BCR 기반 Carrier ID 추적과 Tray 레시피가 공정 전체에 걸쳐 일관성 있게 유지되어야 함",
+      "Samsung Display 양산 납품 장비 특성상 현장 안정성과 엔지니어 유지보수 편의성이 필수",
+    ],
+
+    solution: [
+      "듀얼 로봇(Load/Unload/Peeling) 각각의 동작을 독립 시퀀스로 분리하고 상태 기반(State Machine)으로 관리해 충돌 방지",
+      "MCR·Shuttle·LPM·Reverser 등 모든 장치 간 인터락을 명확히 정의하고 시퀀스 로그로 실시간 추적",
+      "Tray 레시피(Count, Size, Offset 등)를 화면에서 직관적으로 관리하고 공정에 즉시 반영되는 구조 설계",
+      "Robot / LPM / DIO / Motor 유지보수 화면을 분리 구성해 엔지니어가 장치별 독립 점검 가능하도록 구현",
+      "Operate Log 이력을 날짜별 파일로 구조화해 현장 이슈 발생 시 원인 추적이 가능하도록 설계",
+    ],
+
+    scope: [
+      "[메인 제어] Mother Line 전체 자동 운전 시퀀스 (Lot Start → Load → Align → Process → Unload)",
+      "[로봇 제어] Nachi 듀얼 로봇 (Load Robot / Unload Robot / Peeling Robot) 독립 제어 및 시퀀스 연동",
+      "[장치 연동] MCR(6기), Shuttle(A/B), LPM(Load Port), Prealign, Aligner, Reverser, Buffer 통합 제어",
+      "[통신] MELSEC PLC(CC-Link), DeviceNet I/O, BCR, Smart Camera, TCP/IP 다중 통신 연동",
+      "[레시피] Tray 단위 공정 파라미터(Count X/Y, Size, Offset, Vision Offset) 설정·저장·적용",
+      "[유지보수] Robot / LPM / DeviceNet DIO / Motor 축별 수동 제어 및 상태 모니터링",
+      "[모션 설정] 16축 모터 파라미터(속도/가속도/리밋/인터락 등) Config 화면 구성",
+      "[이력 관리] Operate Log / Alarm History / Job History 날짜별 파일 저장 및 조회",
+    ],
+
+    results: [
+      "듀얼 로봇 고속 연속 운전 중 시퀀스 충돌 없이 안정적인 양산 운전 달성",
+      "장치별 유지보수 화면과 로그 체계로 현장 엔지니어의 장애 대응 시간 단축",
+      "Samsung Display 납품 후 현장 양산 적용 완료",
+    ],
+
+    screenshots: [
+      { src: "/projects/dual-robot-mother-line/cover.png", alt: "Main Mother Line 메인 제어 화면 (전체 장치 상태·시퀀스 로그)" },
+      { src: "/projects/dual-robot-mother-line/main1.png", alt: "Main Mother Line 운전 중 화면 (시퀀스 로그 실시간 표시)" },
+      { src: "/projects/dual-robot-mother-line/recipe.png", alt: "Recipe 화면 (Tray 레시피 파라미터 및 레이아웃 프리뷰)" },
+      { src: "/projects/dual-robot-mother-line/main_robot.png", alt: "Maintenance Robot 화면 (듀얼 로봇 수동 제어)" },
+      { src: "/projects/dual-robot-mother-line/maint_lpm.png", alt: "Maintenance LPM 화면 (Load Port / Shuttle / 반전기 수동 제어)" },
+      { src: "/projects/dual-robot-mother-line/maint_dio.png", alt: "Maintenance DIO 화면 (DeviceNet I/O 입출력 모니터링)" },
+      { src: "/projects/dual-robot-mother-line/maint_motion.png", alt: "Maintenance Motor 화면 (다축 모션 상태 및 수동 이동)" },
+      { src: "/projects/dual-robot-mother-line/config_motion.png", alt: "Motor Config 화면 (16축 모터 파라미터 설정)" },
+      { src: "/projects/dual-robot-mother-line/history.png", alt: "Operate Log 화면 (날짜별 운전 이력 조회)" },
+    ],
+  },
+  
+  {
     slug: "efem",
     title: "[C++·MFC] EFEM 장비 소프트웨어 개발",
     subtitle: "Robot · Load Port · Aligner 자동 운전 시퀀스 / 인터락 · 알람 · 복구 로직 구현",
@@ -324,7 +405,7 @@ export const projects: Project[] = [
       { src: "/projects/gem300-driver/monitor.png", alt: "SECS/GEM 메시지 송수신 모니터링 및 로그 화면" },
       { src: "/projects/gem300-driver/log.png", alt: "이벤트/상태 로그 상세 분석 화면" },
     ],
-  },
+  },  
 ];
 
 export function getProjectBySlug(slug: string) {
