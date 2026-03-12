@@ -349,6 +349,83 @@ export const projects: Project[] = [
   },
 
   {
+    slug: "oled-llr-repair",
+    title: "[C++·MFC] OLED LLR Repair 장비 제어 소프트웨어 개발",
+    subtitle: "OCless 레이저 라인 리페어 · 결함 자동 검출 및 레이저 수리 · CIM 연동 · 좌표 보정 엔진",
+    period: "2014.02 (포트폴리오 기준)",
+    role: "아키텍처 설계 / 제어 시퀀스 구현 / 좌표 보정 엔진 / CIM 연동",
+    tags: [
+      "OLED",
+      "LaserRepair",
+      "OCless",
+      "C++",
+      "MFC",
+      "CIM연동",
+      "장비제어",
+      "좌표보정",
+    ],
+    stack: [
+      "C++ / MFC",
+      "Win32 API",
+      "EKSPLA Laser",
+      "CRYLAS Laser",
+      "UMAC Gantry (XYT 스테이지)",
+      "MELSEC PLC (BIT/WORD)",
+      "FTP / TCP/IP",
+      "Camera SDK",
+      "SQLite / INI 설정 파일",
+    ],
+
+    overview:
+      "OLED 디스플레이 패널 제조 공정에서 발생하는 라인 결함(Line Defect)을 검출하고, " +
+      "레이저로 자동 수리(Repair)하는 장비의 제어 소프트웨어를 개발했습니다. " +
+      "OCR 스캐너 없이 CIM 서버에서 결함 좌표 데이터를 FTP로 직접 수신하는 OCless 구조를 적용했습니다. " +
+      "EKSPLA / CRYLAS 듀얼 레이저, UMAC Gantry 스테이지, 다중 렌즈 카메라, PLC I/O를 통합 제어하며 " +
+      "Glass 1매당 최대 500개 결함을 자동 순회·수리하는 전체 시퀀스를 설계하고 구현했습니다.",
+
+    problem: [
+      "OCR 스캐너 없이 CIM 서버 FTP 결함 데이터만으로 정확한 수리 위치를 결정해야 함",
+      "Gantry 직각도·왜곡각·크로스마크 틀어짐 등 기구적 오차가 레이저 조사 위치 불일치로 이어짐",
+      "EKSPLA/CRYLAS 두 종류의 레이저와 5×~50× 다중 렌즈를 공정 조건에 따라 동적으로 전환해야 함",
+      "Glass당 결함 수백 개를 무중단으로 처리하면서 CIM 결과 보고까지 자동화해야 함",
+    ],
+
+    solution: [
+      "FTP 결함 Raw Data 수신 후 LR Logic 테이블 기반으로 수리 대상 자동 판별·분류",
+      "Physical ↔ Logical 좌표 변환 엔진 구현 — Gantry 직각도, 판넬 왜곡, Cross Mark 보정을 단계별 적용",
+      "레이저 타입·렌즈·조사 경로를 레시피(Job/Process Recipe)로 분리해 공정 변경 시 소프트웨어 수정 없이 대응",
+      "전체 수리 시퀀스를 State Machine으로 정의하고 Power Meter 실시간 확인·로그 기록으로 품질 추적",
+    ],
+
+    scope: [
+      "[제어 시퀀스] Glass 로딩 → FTP 데이터 수신 → 좌표 변환 → 스테이지 이동 → 카메라 확인 → 레이저 조사 → CIM 결과 보고",
+      "[좌표 보정] Physical↔Logical 변환, Gantry 직각도·왜곡각 보정, Cross Mark 기준 Panel 원점 설정",
+      "[레이저 제어] EKSPLA / CRYLAS 듀얼 레이저, Q-Switch(Single/Continuous/Burst), ATT·Shutter·파장 제어",
+      "[카메라/비전] CCamView 다중 렌즈(2×~50×UV) 전환, Auto Focus, 결함 패턴 라인 드로잉, ADR Edge 감지",
+      "[레시피] Job Recipe / Process Recipe 이중 구조 — RGB/W 채널별 레이저 경로 파라미터 관리",
+      "[CIM 연동] MELSEC PLC(BIT/WORD), TCP/IP Host, FTP 결함/결과 데이터 송수신",
+      "[데이터 관리] Lot/Cell/Defect 단위 Raw·Sum 데이터 기록, 알람 이력, 운전 로그",
+      "[UI] MFC FormView 기반 — 메인 제어, 알람, 레시피 편집(DMRecipe Grid), 수동 운전 화면",
+    ],
+
+    results: [
+      "Glass 1매당 최대 500개 결함 자동 순회 수리 — 무중단 양산 운전 달성",
+      "좌표 보정 엔진으로 서브픽셀 단위 레이저 조사 정밀도 확보",
+      "OCless 구조로 OCR 스캐너 설비 비용 절감 및 장비 단순화",
+      "운전 로그·Power Meter 이력 기반으로 현장 불량 원인 분석 시간 단축",
+    ],
+
+    screenshots: [
+      { src: "/projects/oled-llr-repair/cover.png",       alt: "메인 자동 운전 화면 — Glass Map, 결함 상태, 시퀀스 로그, 레이저 상태" },
+      { src: "/projects/oled-llr-repair/defect_list.png", alt: "결함 리스트 — Lot/Cell 정보, R/G/B/W 채널별 결함 목록 및 판정 결과" },
+      { src: "/projects/oled-llr-repair/recipe.png",      alt: "Process Recipe — Line Path 그리드, RGB 채널별 레이저 경로 파라미터 편집" },
+      { src: "/projects/oled-llr-repair/camview.png",     alt: "카메라 뷰 — 20× 렌즈 결함 확인, ADR Edge 감지, Jog/Shot 제어" },
+      { src: "/projects/oled-llr-repair/axis_maint.png",  alt: "Axis 유지보수 — Gantry XYT/Z 스테이지 상태, Teaching/좌표 보정" },
+      { src: "/projects/oled-llr-repair/history.png",     alt: "알람 이력 — Alarm History, 레이저/스테이지/CIM 알람 분류 및 조회" },
+    ],
+  },
+
+  {
     slug: "gem300-driver",
     title: "[C++·MFC] 반도체 장비용 GEM 통신 자동화 프로그램 개발",
     subtitle: "SECS/GEM · GEM300 기반 장비 상태/이벤트 자동화 · 로그 중심 안정화 설계",

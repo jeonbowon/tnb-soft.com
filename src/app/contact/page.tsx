@@ -162,10 +162,10 @@ export default function ContactPage() {
       {/* Bottom CTA */}
       <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
         <div className="text-sm font-semibold text-zinc-900">
-          연락은 짧아도 됩니다.
+          간략히 문의 하셔도 됩니다.
         </div>
         <p className="mt-2 text-sm text-zinc-700">
-          “무엇이 불안정한지”, “어떤 결과가 필요해졌는지” — 그 두 줄이면 시작됩니다.
+          “무엇이 불안정한지”, “어떤 결과가 필요한지” - 정도만 보내셔도 검토 가능합니다.
         </p>
         <div className="mt-4 flex flex-wrap gap-3">
           <a
