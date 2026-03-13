@@ -2,6 +2,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
+
+// ✅ Google Analytics 측정 ID — 발급 후 여기에 입력하세요
+const GA_ID = "G-37L5S6QJVM";
 
 export const metadata: Metadata = {
   title: "TNB SOFT",
@@ -25,6 +29,22 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className="min-h-screen antialiased text-zinc-900">
+
+        {/* ── Google Analytics ── */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
         {/* Background layers (Light) */}
         <div className="pointer-events-none fixed inset-0 -z-10">
           <div className="absolute inset-0 bg-[radial-gradient(1200px_700px_at_50%_-10%,rgba(99,102,241,0.18),transparent_60%),radial-gradient(900px_600px_at_100%_30%,rgba(168,85,247,0.10),transparent_60%),radial-gradient(800px_600px_at_0%_60%,rgba(14,165,233,0.10),transparent_55%)]" />
