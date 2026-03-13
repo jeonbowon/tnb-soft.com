@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 
-// ✅ Google Analytics 측정 ID — 발급 후 여기에 입력하세요
+// Google Analytics 측정 ID
 const GA_ID = "G-37L5S6QJVM";
 
 export const metadata: Metadata = {
@@ -28,9 +28,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="min-h-screen antialiased text-zinc-900">
-
-        {/* ── Google Analytics ── */}
+      <head>
+        {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
@@ -39,12 +38,14 @@ export default function RootLayout({
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('js', new Date());
-            gtag('config', '${GA_ID}', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', '${GA_ID}');
           `}
         </Script>
+      </head>
+
+      <body className="min-h-screen antialiased text-zinc-900">
         {/* Background layers (Light) */}
         <div className="pointer-events-none fixed inset-0 -z-10">
           <div className="absolute inset-0 bg-[radial-gradient(1200px_700px_at_50%_-10%,rgba(99,102,241,0.18),transparent_60%),radial-gradient(900px_600px_at_100%_30%,rgba(168,85,247,0.10),transparent_60%),radial-gradient(800px_600px_at_0%_60%,rgba(14,165,233,0.10),transparent_55%)]" />
@@ -69,7 +70,6 @@ export default function RootLayout({
         <header className="sticky top-0 z-50 border-b border-zinc-200/70 bg-white/70 backdrop-blur">
           <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4">
             <Link href="/" className="flex items-center gap-3">
-              {/* Logo */}
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white ring-1 ring-zinc-200 shadow-sm overflow-hidden">
                 <Image
                   src="/brand/tnb_logo.png"
