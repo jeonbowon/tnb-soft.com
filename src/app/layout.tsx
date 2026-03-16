@@ -5,7 +5,7 @@ import Image from "next/image";
 import Script from "next/script";
 
 // Google Analytics 측정 ID
-const GA_ID = "G-37L5S6QJVM";
+const GA_ID = "G-37L5SGQJVM"; //"G-37L5S6QJVM";
 
 export const metadata: Metadata = {
   title: "TNB SOFT",
