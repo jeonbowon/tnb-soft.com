@@ -89,16 +89,27 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6 space-y-1">
             <li>Google AdMob (광고 서비스)</li>
             <li>Google Play 결제 시스템</li>
+            <li>Meta Audience Network (광고 서비스)</li>
           </ul>
 
-          <a
-            href="https://policies.google.com/privacy"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block mt-4 text-sm text-indigo-600 hover:underline"
-          >
-            Google 개인정보처리방침 보기
-          </a>
+          <div className="mt-4 space-y-1">
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-sm text-indigo-600 hover:underline"
+            >
+              Google 개인정보처리방침 보기
+            </a>
+            <a
+              href="https://www.facebook.com/privacy/policy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-sm text-indigo-600 hover:underline"
+            >
+              Meta 개인정보처리방침 보기
+            </a>
+          </div>
         </section>
 
         <section>
