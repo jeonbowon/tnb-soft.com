@@ -1,4 +1,4 @@
 {
-  "ad_banner_order": ["admob", "kakao", "meta"],
-  "ad_interstitial_order": ["admob", "kakao", "meta"]
+  "ad_banner_order": ["admob", "meta", "kakao"],
+  "ad_interstitial_order": ["admob", "meta", "kakao"]
 }
