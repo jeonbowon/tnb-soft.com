@@ -57,7 +57,6 @@ export default function PrivacyPage() {
             <li>성장 데이터 기록 및 그래프 제공</li>
             <li>서비스 안정화 및 오류 분석</li>
             <li>무료 버전 광고 제공 및 성과 측정</li>
-            <li>구독 결제 처리 및 서비스 제공</li>
           </ul>
         </section>
 
@@ -110,7 +109,6 @@ export default function PrivacyPage() {
           <ul className="list-disc pl-6 space-y-1">
             <li>앱 내 삭제 시 즉시 삭제됩니다.</li>
             <li>무료 버전은 앱 삭제 시 로컬 데이터가 제거됩니다.</li>
-            <li>유료 버전은 구독 해지 또는 삭제 요청 시 서버 데이터가 삭제됩니다.</li>
           </ul>
         </section>
 
