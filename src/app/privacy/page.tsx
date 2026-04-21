@@ -108,7 +108,9 @@ export default function PrivacyPage() {
           </h2>
           <ul className="list-disc pl-6 space-y-1">
             <li>앱 내 삭제 시 즉시 삭제됩니다.</li>
-            <li>무료 버전은 앱 삭제 시 로컬 데이터가 제거됩니다.</li>
+            <li>앱 삭제 시 로컬 데이터가 제거됩니다.</li>
+            <li>백업 기능 사용 시 데이터는 JSON 파일로 이용자 기기에 저장되며, 저장 위치는 이용자가 직접 선택합니다.</li>
+            <li>백업 데이터는 회사 서버로 전송되지 않습니다.</li>
           </ul>
         </section>
 
