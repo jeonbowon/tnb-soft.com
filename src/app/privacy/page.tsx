@@ -14,7 +14,7 @@ export default function PrivacyPage() {
         </h1>
         <p className="mt-3 text-zinc-500">(우리아이 성장 그래프)</p>
         <p className="mt-2 text-sm text-zinc-400">
-          시행일: 2026년 2월 16일
+          시행일: 2026년 4월 21일
         </p>
       </header>
 
@@ -125,7 +125,37 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-lg font-semibold text-zinc-900 mb-4">
-            6. 개인정보 보호책임자
+            6. 건강 정보의 특별 보호
+          </h2>
+          <p className="mb-4">
+            키, 몸무게, BMI 등 건강 관련 데이터는 민감한 개인정보로서
+            다음 원칙에 따라 처리됩니다.
+          </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>보험 가입 자격 판단 등 제3자의 평가 목적으로 제공되지 않습니다.</li>
+            <li>광고 타겟팅 또는 맞춤형 광고 목적으로 활용되지 않습니다.</li>
+            <li>이용자의 동의 없이 소셜 미디어 등 외부에 공유되지 않습니다.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-zinc-900 mb-4">
+            7. 아동 개인정보 보호
+          </h2>
+          <p className="mb-4">
+            본 앱은 보호자가 만 14세 미만 자녀의 성장 정보를 관리하는
+            서비스입니다.
+          </p>
+          <ul className="list-disc pl-6 space-y-1">
+            <li>아동의 건강 정보는 보호자의 관리 하에만 수집됩니다.</li>
+            <li>보호자는 언제든지 자녀의 데이터 열람, 수정, 삭제를 요청할 수 있습니다.</li>
+            <li>아동 데이터는 성장 기록 목적 외에 사용되지 않습니다.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-zinc-900 mb-4">
+            8. 개인정보 보호책임자
           </h2>
           <ul className="space-y-1">
             <li>회사명: TNB SOFT</li>
