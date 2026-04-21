@@ -66,18 +66,9 @@ export default function PrivacyPage() {
             3. 정보의 보관 및 저장 위치
           </h2>
 
-          <p className="mb-4">저장 방식은 요금제에 따라 다를 수 있습니다.</p>
-
-          <p className="font-medium">무료 버전</p>
           <ul className="list-disc pl-6 space-y-1">
-            <li>성장 데이터는 이용자 기기 내부(로컬)에 저장됩니다.</li>
+            <li>성장 데이터는 이용자 기기 내부(로컬)에만 저장됩니다.</li>
             <li>회사 서버로 전송되지 않습니다.</li>
-          </ul>
-
-          <p className="font-medium mt-6">유료 버전</p>
-          <ul className="list-disc pl-6 space-y-1">
-            <li>성장 데이터는 클라우드 서버(Web DB)에 저장될 수 있습니다.</li>
-            <li>데이터 전송 시 HTTPS 보안 통신을 사용합니다.</li>
           </ul>
         </section>
 
