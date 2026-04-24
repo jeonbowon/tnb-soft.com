@@ -1,6 +1,6 @@
 {
-  "ad_banner_order": ["kakao", "meta", "admob"],
-  "ad_interstitial_order": ["kakao", "meta", "admob"],
-  "ad_banner_order_overseas": ["meta", "admob"],
-  "ad_interstitial_order_overseas": ["meta", "admob"]
+  "ad_banner_order": ["admob", "kakao", "meta"],
+  "ad_interstitial_order": ["admob", "kakao", "meta"],
+  "ad_banner_order_overseas": ["admob", "meta"],
+  "ad_interstitial_order_overseas": ["admob", "meta"]
 }
